@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="horizontal">
+
+  <TextView
+    android:id="@+id/top_btn_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:drawableLeft="@drawable/button_top_bar_back"
+    android:drawableStart="@drawable/button_top_bar_back"
+    android:drawablePadding="5dp"
+    android:gravity="center"
+    android:text="@string/back"
+    android:textColor="@drawable/top_bar_text_color"/>
+
+</LinearLayout>

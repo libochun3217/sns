@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    style="@style/AppTheme.RootView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        style="@style/SnsTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_tab_height"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#dedfe0"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"/>
+
+</LinearLayout>

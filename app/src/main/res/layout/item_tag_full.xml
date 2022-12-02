@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardView"
+    style="@style/SnsCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/min_separator_height"
+            android:background="@color/light_separator_color"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/section_height">
+
+            <TextView
+                android:id="@+id/tv_tag_title"
+                style="@style/SectionTitle"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/title_hot_tags" />
+
+            <TextView
+                android:id="@+id/btn_tag_more"
+                style="@style/SectionMore"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/img_text_arrow"
+                android:text="@string/recommend_more"/>
+
+            <ImageView
+                android:id="@+id/img_text_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingBottom="1dp"
+                android:layout_marginLeft="@dimen/min_item_spacing"
+                android:layout_marginRight="@dimen/large_item_spacing"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_pink_arrow"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/image_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/image_first"
+                style="@style/TagItemImageStyle" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/image_second"
+                style="@style/TagItemImageStyle" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/image_third"
+                style="@style/TagItemImageStyle" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/min_separator_height"
+            android:layout_marginTop="@dimen/large_item_spacing"
+            android:background="@color/light_separator_color"/>
+
+    </LinearLayout>
+
+</FrameLayout>

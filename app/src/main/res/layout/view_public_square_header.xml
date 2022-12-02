@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/sns_bg_gray"
+              android:orientation="vertical">
+
+    <!-- 轮播图的高度会根据屏幕宽度重新计算-->
+    <FrameLayout
+        android:id="@+id/home_carousel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/sns_image_loading_bg">
+
+        <com.charlee.sns.view.CampaignView
+            android:id="@+id/view_campaign_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/tag_list_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/med_item_spacing"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="@dimen/default_item_margin">
+
+            <TextView
+                style="@style/SectionTitle"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="@string/title_hot_tags"/>
+
+            <TextView
+                android:id="@+id/tag_more"
+                style="@style/SectionMore"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/img_text_arrow"
+                android:text="@string/recommend_more"/>
+
+            <ImageView
+                android:id="@+id/img_text_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/min_item_spacing"
+                android:layout_marginRight="@dimen/large_item_spacing"
+                android:src="@drawable/ic_pink_arrow"/>
+
+        </RelativeLayout>
+
+        <com.charlee.sns.widget.HorizontalListView
+            android:id="@+id/tag_list"
+            style="@style/TagListView"
+            android:layout_marginBottom="@dimen/default_list_margin"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/latest_msg_list_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/med_item_spacing"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="@dimen/default_item_margin">
+
+            <TextView
+                style="@style/SectionTitle"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="@string/title_latest_msg"/>
+
+            <TextView
+                android:id="@+id/latest_msg_more"
+                style="@style/SectionMore"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/img_latest_arrow"
+                android:text="@string/recommend_more"/>
+
+            <ImageView
+                android:id="@+id/img_latest_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/min_item_spacing"
+                android:layout_marginRight="@dimen/large_item_spacing"
+                android:src="@drawable/ic_pink_arrow"/>
+
+        </RelativeLayout>
+
+        <com.charlee.sns.widget.HorizontalListView
+            android:id="@+id/latest_msg_list"
+            style="@style/TagListView"
+            android:layout_marginBottom="@dimen/default_list_margin"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/separator_height"
+            android:background="@color/separator_color"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/med_item_spacing"
+        android:background="@color/white">
+
+        <TextView
+            style="@style/SectionTitle"
+            android:paddingTop="13dp"
+            android:paddingBottom="3dp"
+            android:background="@color/white"
+            android:text="@string/title_hot_messages"/>
+    </LinearLayout>
+
+</LinearLayout>

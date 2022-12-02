@@ -1,0 +1,556 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="AppTheme.RootView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/activity_background</item>
+    </style>
+
+    <!-- 顶部工具栏标题的样式 -->
+    <style name="top_bar_title_txt">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@drawable/top_bar_text_color</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="android:Widget.Holo.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="SnsFloatingButton">
+        <item name="android:layout_width">@dimen/flowting_main_btn_width</item>
+        <item name="android:layout_height">@dimen/flowting_main_btn_width</item>
+        <item name="android:layout_gravity">bottom|right</item>
+        <item name="android:layout_marginRight">@dimen/flowting_main_btn_margin_right</item>
+        <item name="android:layout_marginBottom">@dimen/flowting_main_btn_margin_bottom</item>
+        <item name="android:background">@drawable/btn_add_red_normal</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="SnsFloatingButtonForeground">
+        <item name="android:layout_width">@dimen/flowting_main_btn_width</item>
+        <item name="android:layout_height">@dimen/flowting_main_btn_width</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/selector_button_action_dark</item>
+        <item name="android:clickable">false</item>
+        <item name="android:duplicateParentState">true</item>
+    </style>
+
+    <style name="SectionTitle" parent="@android:style/TextAppearance.Large">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxWidth">@dimen/section_title_text_max_width</item>
+        <item name="android:textColor">@color/normal_text_dark</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:textSize">@dimen/sns_text_med</item>
+        <item name="android:paddingTop">@dimen/default_item_spacing_text</item>
+        <item name="android:paddingBottom">@dimen/default_item_spacing_text</item>
+        <item name="android:paddingLeft">@dimen/content_margin</item>
+        <item name="android:paddingRight">@dimen/content_margin</item>
+        <item name="android:ellipsize">middle</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="CardViewTitle" parent="@android:style/TextAppearance.Large">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxWidth">@dimen/section_title_text_max_width</item>
+        <item name="android:textColor">#333333</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:paddingTop">@dimen/default_item_spacing_text</item>
+        <item name="android:paddingBottom">@dimen/default_item_spacing_text</item>
+        <item name="android:ellipsize">middle</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="CardViewSubTitle" parent="@android:style/TextAppearance.Large">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxWidth">@dimen/section_title_text_max_width</item>
+        <item name="android:textColor">#999999</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:paddingTop">@dimen/default_item_spacing_text</item>
+        <item name="android:paddingBottom">@dimen/default_item_spacing_text</item>
+        <item name="android:paddingLeft">@dimen/content_margin</item>
+        <item name="android:paddingRight">@dimen/content_margin</item>
+        <item name="android:ellipsize">middle</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="SectionMore" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/sns_pink</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:textSize">@dimen/sns_text_small</item>
+        <item name="android:paddingTop">@dimen/default_item_spacing_text</item>
+        <item name="android:paddingBottom">@dimen/default_item_spacing_text</item>
+        <item name="android:paddingLeft">@dimen/content_margin</item>
+        <item name="android:gravity">center</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="CardViewTitleMore" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/selector_card_title_more_color</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:paddingTop">@dimen/default_item_spacing_text</item>
+        <item name="android:paddingBottom">@dimen/default_item_spacing_text</item>
+        <item name="android:paddingLeft">@dimen/content_margin</item>
+        <item name="android:gravity">center</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="SnsCardView">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="SnsCommentCardView">
+        <item name="android:paddingLeft">@dimen/content_margin</item>
+        <item name="android:paddingRight">@dimen/content_margin</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="CardTitle" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/normal_text_dark</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:textSize">@dimen/sns_text_med</item>
+    </style>
+
+    <style name="CardSubtitle" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/normal_text_dark</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:textSize">@dimen/sns_text_small</item>
+    </style>
+
+    <style name="UserName" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/name_text</item>
+        <item name="android:typeface">normal</item>
+    </style>
+
+    <style name="UserName.Large">
+        <item name="android:textSize">@dimen/sns_text_med</item>
+    </style>
+
+    <style name="UserName.Small">
+        <item name="android:textSize">@dimen/sns_text_small</item>
+    </style>
+    <style name="Reason">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#999999</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="Description" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">false</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+        <item name="android:textColor">@color/normal_text_dark</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:textSize">@dimen/sns_text_med</item>
+        <item name="android:textColorLink">@color/link_text</item>
+    </style>
+
+    <style name="CommentSimple" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">false</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">@color/normal_text_dark</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:textSize">@dimen/sns_text_med</item>
+        <item name="android:textColorLink">@color/link_text</item>
+    </style>
+
+    <style name="PublishTime" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/normal_text_gray</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:textSize">@dimen/sns_text_small</item>
+    </style>
+
+    <style name="SnsButtonStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/sns_deep_gray</item>
+        <item name="android:background">@drawable/shape_button_to_follow</item>
+    </style>
+
+    <style name="SnsButtonStyle.Follow">
+        <item name="android:layout_width">@dimen/full_message_follow_btn_width</item>
+        <item name="android:layout_height">@dimen/full_message_follow_btn_height</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+
+    <style name="SnsButtonStyle.RecommendGrid">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">28dp</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+
+    <style name="SnsButtonStyle.RecommendList">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">28dp</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+
+    <style name="SnsProgressStyle">
+        <item name="android:scaleType">centerInside</item>
+    </style>
+
+    <style name="SnsProgressStyle.Small">
+        <item name="android:layout_width">@dimen/full_message_follow_btn_width</item>
+        <item name="android:layout_height">@dimen/full_message_follow_btn_height</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+
+    <style name="SnsSmallIconStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="LikesNum" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/sns_gray</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="PublicSquareMessageListView">
+        <item name="sl_column">2</item>
+        <item name="sl_spacing">@dimen/default_item_spacing</item>
+        <item name="android:paddingLeft">@dimen/default_list_margin</item>
+        <item name="android:paddingRight">@dimen/default_list_margin</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="SimpleMessageListView">
+        <item name="sl_column">2</item>
+        <item name="sl_spacing">@dimen/default_item_spacing</item>
+        <item name="android:paddingTop">@dimen/default_list_margin</item>
+        <item name="android:paddingLeft">@dimen/default_list_margin</item>
+        <item name="android:paddingRight">@dimen/default_list_margin</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="UserListView">
+        <item name="sl_column">1</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:clipToPadding">false</item>
+        <item name="vl_spacingHorizontal">0dp</item>
+    </style>
+
+    <style name="RecommendUserListView">
+        <item name="sl_column">1</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:clipToPadding">false</item>
+    </style>
+
+    <style name="UserMessageListView">
+        <item name="sl_column">2</item>
+        <item name="sl_spacing">@dimen/default_item_spacing</item>
+        <item name="android:paddingTop">@dimen/default_list_margin</item>
+        <item name="android:paddingLeft">@dimen/default_list_margin</item>
+        <item name="android:paddingRight">@dimen/default_list_margin</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="NotificationListView">
+        <item name="android:scrollbars">none</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:paddingTop">@dimen/notify_item_padding_top</item>
+        <item name="android:clipToPadding">false</item>
+        <item name="vl_spacingHorizontal">0dp</item>
+    </style>
+
+    <style name="FullMessageRecyclerView">
+        <item name="android:scrollbars">none</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingTop">@dimen/card_content_margin_half</item>
+        <item name="android:paddingBottom">@dimen/card_content_margin_half</item>
+        <item name="vl_spacingVertical">@dimen/card_content_margin</item>
+        <item name="vl_spacingHorizontal">0dp</item>
+        <item name="android:clipToPadding">false</item>
+    </style>
+
+    <style name="CampaignHistoryRecyclerView">
+        <item name="android:scrollbars">none</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingTop">@dimen/card_content_margin_half</item>
+        <item name="android:paddingBottom">@dimen/card_content_margin_half</item>
+        <item name="vl_spacingVertical">@dimen/card_content_margin</item>
+        <item name="vl_spacingHorizontal">@dimen/card_horizontal_margin</item>
+        <item name="android:clipToPadding">false</item>
+    </style>
+
+    <style name="CommentListRecyclerView">
+        <item name="android:scrollbars">none</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:clipToPadding">false</item>
+        <item name="vl_spacingHorizontal">0dp</item>
+    </style>
+
+    <style name="TagListView">
+        <item name="hl_spacing">@dimen/default_item_spacing</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="hl_paddingStart">@dimen/content_margin</item>
+        <item name="hl_paddingEnd">@dimen/content_margin</item>
+    </style>
+
+    <style name="SnsTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/tab_indicator</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="tabSelectedTextColor">@color/sns_pink</item>
+        <item name="tabTextColor">#333333</item>
+    </style>
+
+    <style name="LoginButtonStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:layout_marginRight">40dp</item>
+        <item name="android:layout_marginTop">@dimen/large_item_spacing</item>
+        <item name="android:textSize">@dimen/text_size_e</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="LoginRelativeLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:layout_marginRight">40dp</item>
+        <item name="android:layout_marginTop">@dimen/large_item_spacing</item>
+        <item name="android:textSize">@dimen/text_size_e</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="LeftDrawableStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_alignParentLeft">true</item>
+    </style>
+
+    <style name="LoginButtonTextViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/min_item_spacing</item>
+        <item name="android:textSize">@dimen/text_size_e</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="LoginSubRelativeLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_size_e</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:paddingLeft">5dp</item>
+    </style>
+
+    <style name="LoginRowLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">95dp</item>
+        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:layout_marginRight">40dp</item>
+        <item name="android:layout_marginTop">@dimen/large_item_spacing</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="TagItemImageStyle">
+        <item name="android:layout_width">@dimen/full_tag_list_item_height</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+    <style name="CommentContent" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/comment_content_text_color</item>
+        <item name="android:typeface">normal</item>
+    </style>
+
+    <style name="CommentContent.Large">
+        <item name="android:textSize">@dimen/comment_user_comment_txt_size</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="CommentContent.Med">
+        <item name="android:textSize">@dimen/sns_text_med</item>
+    </style>
+
+    <style name="CommentContent.Small">
+        <item name="android:textSize">@dimen/sns_text_small</item>
+    </style>
+
+    <style name="CommentEditText" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:cursorVisible">false</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <!-- Use this instead of singleline -->
+        <item name="android:maxEms">1000</item>
+        <item name="android:paddingLeft">3dp</item>
+        <item name="android:paddingRight">3dp</item>
+        <item name="android:scrollHorizontally">false</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="UserDetailsSectionName">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#333333</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:ellipsize">middle</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="UserDetailsSectionValue">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#999999</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:ellipsize">middle</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="CampaignUserTextValue">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">#999999</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:ellipsize">middle</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="TransparentDialog" parent="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"></style>
+
+    <!-- 通知中心字符串样式 -->
+    <style name="NotifyItemSpanName">
+        <item name="android:textSize">@dimen/notify_item_text_name_size</item>
+        <item name="android:textColor">@color/notify_item_text_name</item>
+    </style>
+
+    <style name="NotifyItemSpanLikeString">
+        <item name="android:textSize">@dimen/notify_item_text_comment_size</item>
+        <item name="android:textColor">@color/notify_item_text_comment</item>
+    </style>
+
+    <style name="NotifyItemSpanFollow">
+        <item name="android:textSize">@dimen/notify_item_text_comment_size</item>
+        <item name="android:textColor">@color/notify_item_text_comment</item>
+    </style>
+
+    <style name="NotifyItemSpanLikeComment">
+        <item name="android:textSize">@dimen/notify_item_text_comment_size</item>
+        <item name="android:textColor">@color/notify_item_text_comment</item>
+    </style>
+
+    <style name="NotifyItemSpanTime">
+        <item name="android:textSize">@dimen/notify_item_text_time_size</item>
+        <item name="android:textColor">@color/notify_item_text_publish_time</item>
+    </style>
+
+    <style name="AvatarImageView">
+        <item name="android:background">@drawable/shape_avatar_default_bg</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="AnimBottom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+
+    <style name="SelectParticipateWayStyle" parent="android:Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/AnimBottom</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="SelectButtonStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="UploadProgressHorizontalStyle" parent="@android:style/Widget.ProgressBar.Small">
+        <item name="android:maxHeight">50dp</item>
+        <item name="android:minHeight">10dp</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">@anim/upload_progress_indeterminate_horizontal</item>
+    </style>
+
+</resources>

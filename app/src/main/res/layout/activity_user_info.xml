@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2">
+
+    <com.charlee.sns.view.TopBarLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_layout_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        app:left="back"
+        app:leftText="@string/back"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_bar"
+        android:layout_marginTop="@dimen/max_item_spacing"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/layout_user_portrait"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/selector_layout_notification_bar_bg">
+
+            <TextView
+                style="@style/UserDetailsSectionName"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/med_item_spacing"
+                android:text="@string/user_info_avatar"/>
+
+            <ImageView
+                android:id="@+id/img_user_avatar"
+                style="@style/AvatarImageView"
+                android:layout_width="@dimen/user_avatar_size_med"
+                android:layout_height="@dimen/user_avatar_size_med"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/default_item_spacing_half"
+                android:layout_toLeftOf="@+id/img_arrow"/>
+
+            <ImageView
+                android:id="@+id/img_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_notification_arrow"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_user_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/max_item_spacing"
+            android:background="@drawable/selector_layout_notification_bar_bg">
+
+            <TextView
+                android:id="@+id/txt_name_hint"
+                style="@style/UserDetailsSectionName"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/med_item_spacing"
+                android:text="@string/user_info_nickname"/>
+
+            <TextView
+                android:id="@+id/txt_user_name"
+                style="@style/UserDetailsSectionValue"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/large_item_spacing"
+                android:layout_marginRight="@dimen/default_item_spacing_half"
+                android:layout_toLeftOf="@+id/img_text_arrow"
+                android:layout_toRightOf="@+id/txt_name_hint"
+                android:gravity="end"/>
+
+            <ImageView
+                android:id="@+id/img_text_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_notification_arrow"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_logout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/selector_layout_notification_bar_bg">
+
+            <TextView
+                style="@style/UserDetailsSectionValue"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:text="@string/logout_text"
+                android:textColor="@color/sns_pink"
+                android:textSize="@dimen/text_size_e"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

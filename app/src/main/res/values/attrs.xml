@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SwipyRefreshLayout">
+        <attr name="swipe_direction">
+            <enum name="top" value="0" />
+            <enum name="bottom" value="1" />
+            <enum name="both" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="StaggeredListView">
+        <attr name="sl_column" format="integer" />
+        <attr name="sl_spacing" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="HorizontalListView">
+        <attr name="hl_spacing" format="dimension" />
+        <attr name="hl_paddingStart" format="dimension" />
+        <attr name="hl_paddingEnd" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="VerticalListView">
+        <attr name="vl_spacingHorizontal" format="dimension" />
+        <attr name="vl_spacingVertical" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="RecyclerGridView">
+        <attr name="gl_spacing" format="dimension" />
+        <attr name="gl_spanCount" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="PublicSquareView">
+    </declare-styleable>
+
+    <declare-styleable name="EmptyPlaceholderView">
+        <attr name="hintImage" format="reference"/>
+        <attr name="hintString" format="string"/>
+        <attr name="actionString" format="string"/>
+        <attr name="actionIcon" format="reference"/>
+    </declare-styleable>
+    
+
+    <!-- Declare custom theme attributes that allow changing which styles are
+         used for button bars depending on the API level.
+         ?android:attr/buttonBarStyle is new as of API 11 so this is
+         necessary to support previous API levels. -->
+    <declare-styleable name="ButtonBarContainerTheme">
+        <attr name="metaButtonBarStyle" format="reference"/>
+        <attr name="metaButtonBarButtonStyle" format="reference"/>
+    </declare-styleable>
+
+</resources>

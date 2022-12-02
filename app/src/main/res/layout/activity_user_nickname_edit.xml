@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2">
+
+    <com.charlee.sns.view.TopBarLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_layout_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        app:left="back"
+        app:leftText="@string/back"/>
+
+    <LinearLayout
+        android:id="@+id/layout_user_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/title_bar"
+        android:layout_marginTop="@dimen/max_item_spacing"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/large_item_spacing"
+        android:paddingRight="@dimen/default_item_spacing">
+
+        <EditText
+            android:id="@+id/edit_nick_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/default_item_spacing"
+            android:layout_marginTop="@dimen/default_item_spacing"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:maxHeight="@dimen/comment_sender_edit_max_height"
+            android:maxLength="32"
+            android:minHeight="@dimen/comment_sender_edit_height"
+            android:paddingLeft="@dimen/comment_sender_edit_padding_left"
+            android:paddingRight="@dimen/comment_sender_edit_padding_right"
+            android:textColor="@color/comment_edit_txt_color"
+            android:textSize="@dimen/comment_sender_edit_txt_size"/>
+
+        <ImageView
+            android:id="@+id/img_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/comment_sender_btn_height"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/med_item_spacing"
+            android:paddingLeft="@dimen/default_item_spacing"
+            android:src="@drawable/ic_clear"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

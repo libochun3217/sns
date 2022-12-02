@@ -1,0 +1,175 @@
+<resources>
+    <!-- 缺省页面布局参数 -->
+    <dimen name="content_margin">15dp</dimen>
+    <dimen name="separator_height">1px</dimen><!-- 1dp在某些DPI系数小于1的机型会导致崩溃 -->
+    <dimen name="frame_width">2px</dimen>
+    <dimen name="min_separator_height">1px</dimen>
+    <dimen name="section_height">40dp</dimen>
+
+    <dimen name="default_item_spacing_half">4dp</dimen>
+    <dimen name="default_item_spacing">8dp</dimen>
+    <dimen name="default_item_spacing_text">6dp</dimen><!-- default_item_spacing - 2dp,用于文字（文字本身有padding） -->
+    <dimen name="default_item_margin">7dp</dimen><!-- default_item_margin + default_item_margin = content_margin -->
+    <dimen name="default_list_margin">11dp</dimen><!-- default_list_margin + default_item_spacing/2 = content_margin -->
+    <dimen name="med_item_spacing">10dp</dimen>
+    <dimen name="large_item_spacing">15dp</dimen>
+    <dimen name="min_item_spacing">6dp</dimen>
+    <dimen name="max_item_spacing">20dp</dimen>
+    <dimen name="grid_item_spacing">4dp</dimen>
+
+    <!-- 卡片间距 -->
+    <dimen name="card_content_margin_half">5dp</dimen>
+    <dimen name="card_content_margin">10dp</dimen>
+    <dimen name="card_horizontal_margin">15dp</dimen>
+
+    <!-- 文字大小 -->
+    <dimen name="sns_text_med">14sp</dimen>
+    <dimen name="sns_text_small">12sp</dimen>
+
+    <!-- 图标大小 -->
+    <dimen name="sns_icon_large">36dp</dimen>
+    <dimen name="sns_icon_med">25dp</dimen>
+    <dimen name="sns_icon_small">18dp</dimen>
+    <dimen name="sns_circle_progress">50dp</dimen>
+
+    <!-- 用户头像 -->
+    <dimen name="user_avatar_size_large">92dp</dimen>
+    <dimen name="user_avatar_size_med">40dp</dimen>
+    <dimen name="user_avatar_size_small">35dp</dimen>
+
+    <!-- 详情列表 -->
+    <dimen name="full_message_comment_item_height">20dp</dimen>
+    <dimen name="full_message_follow_btn_width">60dp</dimen>
+    <dimen name="full_message_follow_btn_height">28dp</dimen>
+    <dimen name="find_friend_btn_width">70dp</dimen>
+
+    <!-- 登录对话框界面 -->
+    <dimen name="login_button_height">60dp</dimen>
+    <dimen name="login_button_corner_radius">20dp</dimen>
+    <dimen name="login_logo_width">80dp</dimen>
+    <dimen name="login_logo_height">80dp</dimen>
+    <dimen name="login_dialog_memo_padding_left_right">52dp</dimen>
+
+    <dimen name="full_tag_list_item_height">100dp</dimen>
+
+    <!-- comment -->
+    <dimen name="comment_header_height">55dp</dimen>
+    <dimen name="comment_user_portrait_width">35dp</dimen>
+    <dimen name="comment_user_portrait_height">35dp</dimen>
+    <dimen name="comment_user_name_left_margin">13dp</dimen>
+    <dimen name="comment_user_name_txt_size">14dp</dimen>
+    <dimen name="comment_card_mini_height">78dp</dimen>
+    <dimen name="comment_card_header_margin_top">10dp</dimen>
+    <dimen name="comment_card_header_margin_bottom">10dp</dimen>
+    <dimen name="comment_card_btn_icon_margin_left">5dp</dimen>
+    <dimen name="comment_card_btn_icon_height">36dp</dimen>
+    <dimen name="comment_user_comment_txt_size">16dp</dimen>
+    <dimen name="comment_card_divider_line_width">0.5dp</dimen>
+    <dimen name="comment_sender_btn_txt_size">16dp</dimen>
+    <dimen name="comment_sender_padding_left">15dp</dimen>
+    <dimen name="comment_sender_padding_right">15dp</dimen>
+    <dimen name="comment_sender_height">50dp</dimen>
+    <dimen name="comment_sender_edit_max_height">100dp</dimen>
+    <dimen name="comment_sender_edit_height">32dp</dimen>
+    <dimen name="comment_sender_edit_txt_size">16dp</dimen>
+    <dimen name="comment_sender_edit_padding_left">8dp</dimen>
+    <dimen name="comment_sender_edit_padding_right">8dp</dimen>
+    <dimen name="comment_sender_btn_height">32dp</dimen>
+    <dimen name="comment_sender_btn_width">50dp</dimen>
+    <dimen name="comment_sender_btn_max_width">100dp</dimen>
+
+    <!-- publish -->
+    <dimen name="publish_layout_height">50dp</dimen>
+    <dimen name="publish_image_width">36dp</dimen>
+    <dimen name="publish_image_height">36dp</dimen>
+    <dimen name="tag_view_radius">10dp</dimen>
+
+    <dimen name="section_title_text_max_width">200dp</dimen>
+    <integer name="text_max_length">140</integer>
+
+    <!-- 用户中心 -->
+    <dimen name="user_detail_header_container_height">200dp</dimen>
+    <dimen name="user_detail_header_height">300dp</dimen>
+    <dimen name="user_detail_header_image_width">80dp</dimen>
+    <dimen name="user_detail_header_image_height">80dp</dimen>
+    <dimen name="user_detail_header_image_margin_left">15dp</dimen>
+    <dimen name="user_detail_header_image_margin_right">15dp</dimen>
+    <dimen name="user_detail_header_number_text_size">19dp</dimen>
+    <dimen name="user_detail_header_tip_text_size">13dp</dimen>
+    <dimen name="user_detail_header_tip_text_padding_top">3dp</dimen>
+    <dimen name="user_detail_header_follow_btn_height">30dp</dimen>
+    <dimen name="user_detail_header_follow_btn_anim_img_height">18dp</dimen>
+    <dimen name="user_detail_header_follow_btn_text_size">13dp</dimen>
+    <dimen name="user_detail_header_follow_btn_text_drawable_height">13dp</dimen>
+    <dimen name="user_detail_header_follow_btn_text_drawable_padding">6dp</dimen>
+    <dimen name="user_detail_list_padding_left">4dp</dimen>
+    <dimen name="user_detail_list_padding_right">4dp</dimen>
+
+    <!-- title bar -->
+    <dimen name="title_bar_height">44dp</dimen>
+    <dimen name="title_bar_tab_height">42dp</dimen>
+    <dimen name="title_bar_left_btn_width">32dp</dimen>
+    <dimen name="title_bar_left_btn_height">32dp</dimen>
+    <dimen name="title_bar_title_text_size">19sp</dimen>
+    <dimen name="title_bar_title_text_width">200dp</dimen>
+
+    <!-- notifications -->
+    <dimen name="notify_item_mini_height">58dp</dimen>
+    <dimen name="notify_item_margin_left">15dp</dimen>
+    <dimen name="notify_item_margin_right">15dp</dimen>
+    <dimen name="notify_item_margin_top">11.5dp</dimen>
+    <dimen name="notify_item_margin_bottom">11.5dp</dimen>
+    <dimen name="notify_item_portrait_height">35dp</dimen>
+    <dimen name="notify_item_portrait_margin_right">8dp</dimen>
+    <dimen name="notify_item_message_image_width">48dp</dimen>
+    <dimen name="notify_item_message_image_height">48dp</dimen>
+    <dimen name="notify_item_message_image_margin_top">5dp</dimen>
+    <dimen name="notify_item_message_image_margin_bottom">5dp</dimen>
+    <dimen name="notify_item_message_image_margin_left">10dp</dimen>
+    <dimen name="notify_item_btn_follow_margin_top">13dp</dimen>
+    <dimen name="notify_item_btn_follow_height">28dp</dimen>
+    <dimen name="notify_item_btn_following_anim_height">18dp</dimen>
+    <dimen name="notify_item_text_name_size">14dp</dimen>
+    <dimen name="notify_item_txt_commment_margin_top">10.5dp</dimen>
+    <dimen name="notify_item_txt_commment_margin_bottom">10.5dp</dimen>
+    <dimen name="notify_item_text_comment_size">14dp</dimen>
+    <dimen name="notify_item_text_time_size">14dp</dimen>
+    <dimen name="notify_item_text_love_icon_size_width">17dp</dimen>
+    <dimen name="notify_item_text_love_icon_size_height">15dp</dimen>
+    <dimen name="notify_item_divider_line_height">0.5dp</dimen>
+    <dimen name="notify_item_padding_top">0dp</dimen>
+
+    <!-- 悬浮按钮 -->
+    <dimen name="radius_large">120dp</dimen>
+    <dimen name="radius_middle">72dp</dimen>
+    <dimen name="flowting_main_btn_width">50dp</dimen>
+    <dimen name="flowting_main_btn_margin_right">25dp</dimen>
+    <dimen name="flowting_main_btn_margin_bottom">25dp</dimen>
+
+    <!-- 表情 -->
+    <dimen name="emotion_size">25dp</dimen>
+
+    <!-- empty holder -->
+    <dimen name="empty_holder_txt_margin_top">20dp</dimen>
+    <dimen name="empty_holder_txt_margin_bottom">30dp</dimen>
+    <dimen name="empty_holder_txt_margin_left">60dp</dimen>
+    <dimen name="empty_holder_txt_margin_right">60dp</dimen>
+    <dimen name="empty_holder_btn_txt_size">14dp</dimen>
+    <dimen name="empty_holder_btn_width">150dp</dimen>
+    <dimen name="empty_holder_btn_height">32dp</dimen>
+    <dimen name="empty_holder_btn_icon_padding_right">12dp</dimen>
+
+    <!-- custom menu -->
+    <dimen name="custom_menu_divider_height">0.5dp</dimen>
+    <dimen name="custom_menu_divider_margin_left_right">8dp</dimen>
+    <dimen name="custom_menu_interval_space_height">8dp</dimen>
+    <dimen name="custom_menu_text_height">50dp</dimen>
+    <dimen name="custom_menu_text_size">15dp</dimen>
+    <dimen name="custom_menu_margin_left_right">15dp</dimen>
+    <dimen name="custom_menu_width">292dp</dimen>
+
+    <dimen name="button_corner_radius">5dp</dimen>
+
+    <dimen name="top_layout_height">30dp</dimen>
+
+</resources>

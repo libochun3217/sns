@@ -1,0 +1,222 @@
+﻿<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="test_string">Test</string>
+
+    <!-- 通用 -->
+    <string name="txt_colon">:</string><!-- 冒号，用于用户名与评论之间的分隔 -->
+
+    <!-- 社区首页 -->
+    <string name="home_tab_public_square">热门</string>
+    <string name="home_tab_feeds">关注</string>
+    <string name="title_hot_tags">热门标签</string>
+    <string name="title_latest_msg">最新图片</string>
+    <string name="title_more">更多 &gt;</string>
+    <string name="title_hot_messages">热门图片</string>
+
+    <!-- 用户消息界面上的操作及文字 -->
+    <string name="action_see_all_comments">所有(%1$s)条评论</string>
+    <string name="status_followed">已关注</string>
+
+    <!-- 错误提示消息 -->
+    <string name="hint_not_logged_in">登录后，关注的人动态将在此处显示</string>
+    <string name="action_login">登录</string>
+    <string name="hint_feeds_shown_here">关注的人动态将在此处显示</string>
+    <string name="action_discover">去发现关注更多人</string>
+    <string name="hint_no_network">网络未连接，请连接你的网络。</string>
+    <string name="hint_request_failed">打开失败，请稍后再试</string>
+    <string name="action_refresh">刷新</string>
+    <string name="hint_need_upgrade">服务器已经停止支持当前版本，请升级应用。谢谢。</string>
+    <string name="action_back_to_user_center_page">返回个人中心</string>
+    <string name="hint_message_removed">作品已经被删除</string>
+    <string name="action_go_back">返回</string>
+    <string name="back">返回</string>
+
+    <!-- 登录对话框-->
+    <string name="fb_login_text">Facebook</string>
+    <string name="wx_login_text">微信登录</string>
+    <string name="qq_login_text">QQ 登录</string>
+    <string name="kakao_login_text">Kakao</string>
+    <string name="logout_text">退出登录</string>
+    <string name="select_login_channel">请选择登录方式</string>
+    <string name="login_failed">登录失败</string>
+    <string name="logging_text">正在登录…</string>
+    <string name="close">关闭</string>
+    <string name="anonymous_login_text">匿名</string>
+    <string name="anonymous_bind_hint_simple">绑定账号可以在设备间迁移数据。</string>
+    <string name="anonymous_bind">绑定</string>
+    <string name="anonymous_login_success_hint">已用随机昵称(%s)登录</string>
+
+    <!--个人主页-->
+    <string name="user_detail_title_default">个人主页</string>
+    <string name="user_detail_header_follow_btn">"关注"</string>
+    <string name="user_detail_header_unfollow_btn">"取消关注"</string>
+    <string name="user_detail_header_txt_pics">图片</string>
+    <string name="user_detail_header_txt_poster">帖子</string>
+    <string name="user_detail_header_txt_followee">关注</string>
+    <string name="user_detail_header_txt_Follower">粉丝</string>
+    <string name="user_detail_header_toast_follow_failed">关注失败，请检查网络</string>
+    <string name="user_detail_header_toast_unfollow_failed">取消关注失败，请检查网络</string>
+    <string name="user_detail_header_unknown_count">...</string>
+    <string name="user_detail_empty_view_no_pictures">还没分享内容呢！</string>
+    <string name="user_detail_settings_menu_logout">退出登录</string>
+    <string name="user_detail_settings_menu_cancel">取消</string>
+    <string name="user_detail_dialog_unfollow_confirm_title">取消关注</string>
+    <string name="user_detail_dialog_unfollow_confirm_message">确定要取消关注吗？</string>
+    <string name="user_detail_list_no_more_message">没有更多啦</string>
+    <string name="cancel">取消</string>
+
+    <!--TAG标签-->
+    <string name="tag_list_page_title">热门标签</string>
+    <string name="tag_no_photo">没有分享的照片</string>
+
+    <!-- 通知中心 -->
+    <string name="notify_center_title">通知</string>
+    <string name="notify_center_empty_view_no_notification">还没有收到任何消息</string>
+    <string name="notify_center_list_item_love_your_photo">赞了你的作品</string>
+    <string name="notify_center_list_item_follow_you">已经关注了你</string>
+    <string name="notify_center_list_item_comment">评论了你的作品</string>
+    <string name="notify_center_list_item_reply_comment">回复:</string>
+    <string name="notify_center_receive_messages">收到%d条新消息通知</string>
+
+    <!-- 通知中心，支持fcm拼接 -->
+    <string name="notify_center_list_item_love_your_photo_s" tools:ignore="UnusedResources">%s赞了你的作品</string>
+    <string name="notify_center_list_item_follow_you_s" tools:ignore="UnusedResources">%s关注了你</string>
+    <string name="notify_center_list_item_comment_s" tools:ignore="UnusedResources">%1$s评论了你的作品:%2$s</string>
+    <string name="notify_center_list_item_reply_comment_s" tools:ignore="UnusedResources">%1$s回复:%2$s</string>
+
+    <!-- 消息详情页 -->
+    <string name="msg_detail_comment_format">%1$s: %2$s</string>
+
+    <!-- 消息详情页上的Context Menu -->
+    <string name="ctx_menu_share_title">分享</string>
+    <string name="ctx_menu_delete_title">删除</string>
+    <string name="ctx_menu_report_title">举报</string>
+    <string name="ctx_menu_copy_url_title">拷贝链接</string>
+
+    <!-- 用户操作确认对话框 -->
+    <string name="title_confirm_delete">确认删除</string>
+    <string name="message_confirm_delete">确定要删除这个帖子吗？</string>
+    <string name="title_confirm_report">确认举报</string>
+    <string name="message_confirm_report">确定要举报这个帖子吗？</string>
+    <string name="comment_confirm_delete">确认删除这条评论？</string>
+
+    <!-- 用户操作的通知 -->
+    <string name="notification_url_copied">链接已经拷贝到剪贴板</string>
+    <string name="notification_message_reporting">举报此张照片</string>
+    <string name="notification_message_reported">举报成功</string>
+    <string name="notification_message_deleted">照片已成功删除</string>
+    <string name="notification_message_delete_failed">删除照片失败</string>
+    <string name="notification_message_report_failed">举报失败</string>
+    <string name="notification_follow_failed">关注用户失败</string>
+    <string name="notification_share_failed">分享失败</string>
+    <string name="notification_like_failed">赞失败</string>
+
+    <!-- 进度状态 -->
+    <string name="status_removing">删除中...</string>
+
+    <!--Comment-->
+    <string name="message_comment">评论</string>
+    <string name="edit_comment_hint">写评论……</string>
+    <string name="publish_comment">发送</string>
+
+    <!--Publish-->
+    <string name="publishing">上传中……</string>
+    <string name="publish_failed">上传失败</string>
+    <string name="sns_share_edit_hint">请在这里输入内容或添加标签…</string>
+    <string name="sns_share_photo">分享到魔图</string>
+    <string name="sns_share_success">分享成功</string>
+    <string name="sns_share_text_too_long">文本过长，只允许140个字符</string>
+    <string name="welcome_tab_title_motu">魔图</string>
+    <string name="welcome_tab_title_sns">晒图</string>
+
+    <!--发布时间-->
+    <string name="time_jsut_now">刚才</string>
+    <string name="time_one_minute">%d分钟</string>    
+    <plurals name="time_format_minutes">
+        <item quantity="one">%d分钟前</item>
+        <item quantity="other">%d分钟前</item>
+    </plurals>
+    <plurals name="time_format_hours">
+        <item quantity="one">%d小时前</item>
+        <item quantity="other">%d小时前</item>
+    </plurals>
+    <plurals name="time_format_days">
+        <item quantity="one">%d天前</item>
+        <item quantity="other">%d天前</item>
+    </plurals>
+    <plurals name="time_format_months">
+        <item quantity="one">%d月前</item>
+        <item quantity="other">%d月前</item>
+    </plurals>
+    <plurals name="time_format_years">
+        <item quantity="one">%d年前</item>
+        <item quantity="other">%d年前</item>
+    </plurals>
+
+    <string name="welcome">首页</string>
+
+    <!-- 登录对话框新加 -->
+    <string name="login_memo_notification_center">有人关注、评论或赞了你的照片，将在此处通知你</string>
+    <string name="login_memo_user_center">登录后将在此处显示个人信息</string>
+
+    <string name="sns_share_card_text_hint">点击此处，将瞬间分享给全世界</string>
+    <string name="sns_share_description">图片分享自魔图</string>
+    <string name="sns_share_title">魔图</string>
+
+    <!-- 运营活动 -->
+    <string name="campaign_join_num">%d 人参与</string>
+    <plurals name="campaign_join_num">
+        <item quantity="one">%d 人参与</item>
+        <item quantity="other">%d 人参与</item>
+    </plurals>
+    <plurals name="campaign_viewer_num">
+        <item quantity="one">%d 浏览</item>
+        <item quantity="other">%d 浏览</item>
+    </plurals>
+    <plurals name="campaign_remaining_time">
+        <item quantity="one">剩 %d 天</item>
+        <item quantity="other">剩 %d 天</item>
+    </plurals>
+    <string name="campaign_join_num_default">... 人参与</string>
+    <string name="campaign_viewer_num_default">... 浏览</string>
+    <string name="campaign_remaining_time_default">剩...天</string>
+    <string name="campaign_gift_hint_default">参加活动赢大奖</string>
+    <string name="campaign_over">已结束</string>
+    <string name="campaign_history_events">历史活动</string>
+    <string name="campaign_join_challenge">参加挑战</string>
+    <string name="campaign_join">参加</string>
+    <string name="campaign_join_edit">编辑</string>
+    <string name="campaign_join_ablum">相册</string>
+    <string name="campaign_system_notice">中奖通知</string>
+    <string name="campaign_gift_notification_text">恭喜！你在挑战活动中已中奖~快去领取奖品吧</string>
+    <string name="campaign_gift_push_text">恭喜！你在挑战活动中已中奖~点我领取奖品吧</string>
+    <string name="campaign_popular_photo_hint">参赛作品</string>
+    <string name="hint_campaign_removed">当前活动不存在</string>
+    <string name="hint_no_historical_event">还没有已结束的活动哦</string>
+    <string name="campaign_share_title">魔图挑战赛</string>
+    <!-- 个人中心 -->
+    <string name="user_details_message_notification">消息通知</string>
+    <string name="user_info_avatar">头像</string>
+    <string name="user_info_nickname">昵称</string>
+
+    <!-- 修改头像 -->
+    <string name="user_portrait_edit">修改头像</string>
+    <string name="user_nickname_edit">修改昵称</string>
+    <string name="user_info_save">保存</string>
+
+    <string name="user_info_edit">编辑资料</string>
+    <string name="recommend_users">推荐</string>
+    <string name="recommend_more">更多</string>
+    <string name="follow_title">我的关注</string>
+    <string name="find_more_friends">发现好友</string>
+    <string name="each_other">互相关注</string>
+    <string name="no_photo">还没有发布过图片哦</string>
+    <string name="no_users_hint">暂时没有推荐的人，请刷新页面重试</string>
+    <string name="view_more">发现更多美图</string>
+
+    <string name="reason0">可能感兴趣</string>
+    <string name="reason1">可能认识</string>
+    <string name="reason2">最近活跃</string>
+    <string name="reason3">热门用户</string>
+    <string name="comment_content_format_with_father">%1$s: %2$s</string>
+    <string name="msg_detail_comment_format_with_father">%1$s @%2$s: %3$s</string>
+</resources>

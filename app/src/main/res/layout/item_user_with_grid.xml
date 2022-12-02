@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/cardView"
+    style="@style/SnsCardView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_close_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|top"
+            android:padding="@dimen/default_item_spacing"
+            android:src="@drawable/ic_card_view_close"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/content_margin"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/img_user_avatar"
+                style="@style/AvatarImageView"
+                android:layout_width="@dimen/user_avatar_size_med"
+                android:layout_height="@dimen/user_avatar_size_med"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/txt_user_name"
+                style="@style/UserName.Large"
+                android:layout_below="@+id/img_user_avatar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="6dp"
+                android:ellipsize="middle"
+                android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/txt_reason"
+                style="@style/Reason"
+                android:layout_below="@+id/txt_user_name"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="8dp"
+                android:ellipsize="middle"
+                android:singleLine="true"/>
+
+            <ImageView
+                android:id="@+id/img_follow"
+                style="@style/SnsButtonStyle.RecommendGrid"
+                android:layout_below="@+id/txt_reason"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_to_follow"/>
+
+            <ImageView
+                android:id="@+id/img_following"
+                style="@style/SnsProgressStyle.Small"
+                android:layout_below="@+id/txt_reason"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/uploading"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</FrameLayout>

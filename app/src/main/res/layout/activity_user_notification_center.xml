@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:background="@color/white"
+                tools:context="com.charlee.sns.activity.UserNotificationCenterActivity">
+
+    <com.charlee.sns.view.TopBarLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_layout_height"
+        android:layout_alignParentTop="true"
+        app:left="back"
+        app:leftText="@string/back"/>
+
+    <com.charlee.sns.view.UserNotificationListView
+        android:id="@+id/user_notification_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_bar" />
+
+    <com.charlee.sns.view.EmptyPlaceholderView
+        android:id="@+id/empty_placeholder_in_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_bar"
+        android:background="@color/white"
+        android:visibility="gone"/>
+</RelativeLayout>

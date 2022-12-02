@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/sns_bg_gray"
+              android:layout_marginBottom="@dimen/default_list_margin"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <!--头像-->
+        <ImageView
+            android:id="@+id/img_user_detail_header"
+            android:layout_width="@dimen/user_detail_header_image_width"
+            android:layout_height="@dimen/user_detail_header_image_height"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/user_detail_header_image_margin_left"
+            android:layout_marginRight="@dimen/user_detail_header_image_margin_right"
+            android:scaleType="centerCrop"/>
+
+        <!-- 数据 和 按钮-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/user_detail_header_image_height"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/user_detail_header_image_margin_right"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/container_numbers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_layout_frame_with_right"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/UserDetailsSectionName"
+                        android:text="@string/user_detail_header_txt_poster"/>
+
+                    <TextView
+                        android:id="@+id/txt_user_detail_header_pic_num"
+                        style="@style/UserDetailsSectionValue"
+                        android:paddingTop="@dimen/user_detail_header_tip_text_padding_top"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_followee_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_button_follower_followee"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/UserDetailsSectionName"
+                        android:text="@string/user_detail_header_txt_followee"/>
+
+                    <TextView
+                        android:id="@+id/txt_user_detail_header_followee_num"
+                        style="@style/UserDetailsSectionValue"
+                        android:paddingTop="@dimen/user_detail_header_tip_text_padding_top"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_follower_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_button_user_header_follow"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/UserDetailsSectionName"
+                        android:text="@string/user_detail_header_txt_Follower"/>
+
+                    <TextView
+                        android:id="@+id/txt_user_detail_header_follower_num"
+                        style="@style/UserDetailsSectionValue"
+                        android:paddingTop="@dimen/user_detail_header_tip_text_padding_top"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/user_detail_header_follow_btn_height">
+
+                <!-- 编辑用户头像 -->
+                <FrameLayout
+                    android:id="@+id/layout_edit_user_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_button_to_follow"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/txt_edit_user_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:drawableLeft="@drawable/selector_ic_edit_user_info"
+                        android:drawablePadding="@dimen/min_item_spacing"
+                        android:gravity="center"
+                        android:text="@string/user_info_edit"
+                        android:textColor="@color/selector_to_follow_text_color"/>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_follow_user_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <FrameLayout
+                        android:id="@+id/btn_user_detail_header_follow_action"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_button_to_follow">
+
+                        <TextView
+                            android:id="@+id/txt_user_detail_header_follow_action"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:drawableLeft="@drawable/selector_ic_user_to_follow"
+                            android:drawablePadding="@dimen/min_item_spacing"
+                            android:gravity="center"
+                            android:text="@string/user_detail_header_follow_btn"
+                            android:textColor="@color/sns_pink"
+                            android:textSize="@dimen/user_detail_header_follow_btn_text_size"/>
+
+                        <ImageView
+                            android:id="@+id/img_user_detail_header_follow_btn_anim"
+                            android:layout_width="@dimen/user_detail_header_follow_btn_anim_img_height"
+                            android:layout_height="@dimen/user_detail_header_follow_btn_anim_img_height"
+                            android:layout_gravity="center"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_loading_pink"
+                            android:visibility="gone"
+                            />
+                    </FrameLayout>
+
+                    <ImageView
+                        android:id="@+id/img_expand_recommend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/med_item_spacing"
+                        android:src="@drawable/ic_expand_recommend"/>
+
+                </LinearLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/container_recommend_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginTop="-12dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1px"
+                android:layout_weight="1"
+                android:layout_gravity="bottom"
+                android:background="@color/sns_bg_gray"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_card_view_more"/>
+            <View
+                android:layout_width="24dp"
+                android:layout_height="1px"
+                android:layout_gravity="bottom"
+                android:background="@color/sns_bg_gray"/>
+        </LinearLayout>
+
+        <TextView
+            style="@style/CardViewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/large_item_spacing"
+            android:text="@string/recommend_users"/>
+    </LinearLayout>
+
+    <com.charlee.sns.view.RecommendUsersCardView
+        android:id="@+id/user_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:paddingBottom="@dimen/large_item_spacing"
+        android:background="@color/white"
+        android:visibility="gone"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/med_item_spacing"
+        android:background="@color/sns_bg_gray"/>
+
+    <LinearLayout
+        android:id="@+id/notification_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_layout_notification_bar_bg"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/sns_divider"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/txt_notification_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/med_item_spacing"
+                android:drawableLeft="@drawable/ic_notification_indicator"
+                android:drawablePadding="@dimen/med_item_spacing"
+                android:gravity="center"
+                android:text="@string/user_details_message_notification"
+                android:textColor="@color/sns_message_notification_gray"/>
+
+            <ImageView
+                android:id="@+id/img_new_notification"
+                style="@style/CardViewTitleMore"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/img_text_arrow"
+                android:src="@drawable/ic_notification_new"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/img_text_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="4dp"
+                android:paddingBottom="1dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_notification_arrow"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/sns_divider"/>
+
+</LinearLayout>

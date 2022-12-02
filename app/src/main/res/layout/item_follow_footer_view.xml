@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/sns_bg_gray">
+
+    <Button
+        android:id="@+id/btn_switch"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/content_margin"
+        android:layout_marginRight="@dimen/content_margin"
+        android:layout_marginTop="@dimen/large_item_spacing"
+        android:layout_marginBottom="@dimen/large_item_spacing"
+        android:background="@drawable/selector_button_campaign_participate"
+        android:text="@string/view_more"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"/>
+
+</FrameLayout>
+

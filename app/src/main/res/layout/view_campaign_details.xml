@@ -1,0 +1,57 @@
+<FrameLayout
+    android:id="@+id/main_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sns_bg_gray"
+    android:fitsSystemWindows="true">
+
+    <com.charlee.sns.widget.SwipeRefreshLayoutEx
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:swipe_direction="both"
+        android:background="@color/white">
+
+        <com.charlee.sns.widget.StaggeredListView
+            android:id="@+id/staggered_simple_message_list"
+            style="@style/SimpleMessageListView"
+            android:paddingTop="0dp"
+            android:paddingBottom="70dp"
+            android:clipToPadding="false"/>
+
+    </com.charlee.sns.widget.SwipeRefreshLayoutEx>
+
+    <RelativeLayout
+        android:id="@+id/layout_participate_campaign"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom"
+        android:background="#ccffffff"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentTop="true"
+            android:background="#dedfe0"/>
+
+        <Button
+            android:id="@+id/btn_participate"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/max_item_spacing"
+            android:layout_marginLeft="@dimen/max_item_spacing"
+            android:background="@drawable/selector_button_campaign_participate"
+            android:text="@string/campaign_join"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textAllCaps="false"
+            style="?android:attr/borderlessButtonStyle"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/cardView"
+    style="@style/SnsCommentCardView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/comment_user_portrait_height"
+            android:layout_marginBottom="@dimen/min_item_spacing"
+            android:layout_marginTop="@dimen/min_item_spacing"
+            >
+
+            <FrameLayout
+                android:id="@+id/container_avatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <ImageView
+                    android:id="@+id/img_user_avatar"
+                    style="@style/AvatarImageView"
+                    android:layout_width="@dimen/comment_user_portrait_width"
+                    android:layout_height="@dimen/comment_user_portrait_width"/>
+
+                <ImageView
+                    android:id="@+id/img_official_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|right"
+                    android:src="@drawable/ic_official_indicator"
+                    android:visibility="gone"/>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_user_name"
+                style="@style/UserName.Large"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/comment_user_name_left_margin"
+                android:layout_toRightOf="@+id/container_avatar"
+                android:text="@string/test_string"/>
+
+            <TextView
+                android:id="@+id/tv_published_time"
+                style="@style/PublishTime"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:id="@+id/iv_uploading"
+                android:layout_width="@dimen/comment_card_btn_icon_height"
+                android:layout_height="@dimen/comment_card_btn_icon_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/uploading"
+                android:visibility="invisible"/>
+
+            <ImageView
+                android:id="@+id/btn_problem"
+                android:layout_width="@dimen/comment_card_btn_icon_height"
+                android:layout_height="@dimen/comment_card_btn_icon_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/comment_card_btn_icon_margin_left"
+                android:scaleType="centerInside"
+                android:src="@drawable/problem"
+                android:visibility="invisible"/>
+
+            <ImageView
+                android:id="@+id/btn_retry"
+                style="@style/SnsButtonStyle"
+                android:layout_width="@dimen/comment_card_btn_icon_height"
+                android:layout_height="@dimen/comment_card_btn_icon_height"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/comment_card_btn_icon_margin_left"
+                android:layout_marginRight="@dimen/default_item_spacing"
+                android:layout_toLeftOf="@id/btn_problem"
+                android:background="@drawable/shape_comment_card_btn"
+                android:scaleType="centerInside"
+                android:src="@drawable/retry"
+                android:visibility="invisible"/>
+
+            <ImageView
+                android:id="@+id/btn_delete"
+                style="@style/SnsButtonStyle"
+                android:layout_width="@dimen/comment_card_btn_icon_height"
+                android:layout_height="@dimen/comment_card_btn_icon_height"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/default_item_spacing"
+                android:layout_toLeftOf="@+id/btn_retry"
+                android:background="@drawable/shape_comment_card_btn"
+                android:scaleType="centerInside"
+                android:src="@drawable/delete"
+                android:visibility="invisible"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_comment_content"
+            style="@style/CommentContent.Large"
+            android:layout_marginBottom="@dimen/min_item_spacing"
+            android:clickable="true"
+            android:text="@string/test_string"
+            android:textColorLink="@color/link_text"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/comment_card_divider_line_width"
+            android:background="@color/comment_divider_line_color"/>
+
+    </LinearLayout>
+
+</FrameLayout>

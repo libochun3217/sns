@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/login_page"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_panel_background">
+
+    <LinearLayout
+        android:id="@+id/login_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/med_item_spacing"
+        android:layout_marginRight="@dimen/med_item_spacing"
+        android:background="@drawable/selector_login_panel_background"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/max_item_spacing">
+
+        <ImageView
+            android:id="@+id/login_panel_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:padding="@dimen/large_item_spacing"
+            android:src="@drawable/selector_button_login_panel_close"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="-20dp"
+            android:gravity="center_horizontal"
+            android:text="@string/select_login_channel"
+            android:textColor="#4A4A4A"
+            android:textSize="18sp"/>
+
+        <RelativeLayout
+            android:id="@+id/anonymous_login_button"
+            style="@style/LoginRelativeLayoutStyle"
+            android:background="@drawable/selector_button_anonymous_login"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/leftDrawable"
+                style="@style/LeftDrawableStyle"
+                android:src="@drawable/login_anonymous_left_drawable"/>
+
+            <TextView
+                style="@style/LoginButtonTextViewStyle"
+                android:layout_toRightOf="@+id/leftDrawable"
+                android:text="@string/anonymous_login_text"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/fb_kakao_login_layout"
+            style="@style/LoginRowLayoutStyle"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/kakao_login_button"
+                style="@style/LoginSubRelativeLayoutStyle"
+                android:background="@drawable/selector_button_kakao_login">
+
+                <ImageView
+                    android:id="@+id/kakao_leftDrawable"
+                    style="@style/LeftDrawableStyle"
+                    android:src="@drawable/selector_image_kakao_login"/>
+
+                <TextView
+                    style="@style/LoginButtonTextViewStyle"
+                    android:layout_toRightOf="@+id/kakao_leftDrawable"
+                    android:text="@string/kakao_login_text"
+                    android:textColor="#62451A"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/fb_login_button"
+                style="@style/LoginSubRelativeLayoutStyle"
+                android:layout_marginTop="@dimen/large_item_spacing"
+                android:background="@drawable/selector_button_fb_login">
+
+                <ImageView
+                    android:id="@+id/facebook_leftDrawable"
+                    style="@style/LeftDrawableStyle"
+                    android:src="@drawable/selector_image_fb_login"/>
+
+                <TextView
+                    style="@style/LoginButtonTextViewStyle"
+                    android:layout_toRightOf="@+id/facebook_leftDrawable"
+                    android:text="@string/fb_login_text"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/wx_qq_login_layout"
+            style="@style/LoginRowLayoutStyle"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/wx_login_button"
+                style="@style/LoginSubRelativeLayoutStyle"
+                android:background="@drawable/selector_button_wx_login">
+
+                <ImageView
+                    android:id="@+id/wx_leftDrawable"
+                    style="@style/LeftDrawableStyle"
+                    android:src="@drawable/wechat_login_icon"/>
+
+                <TextView
+                    style="@style/LoginButtonTextViewStyle"
+                    android:layout_toRightOf="@+id/wx_leftDrawable"
+                    android:text="@string/wx_login_text"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/qq_login_button"
+                style="@style/LoginSubRelativeLayoutStyle"
+                android:layout_marginTop="@dimen/large_item_spacing"
+                android:background="@drawable/selector_button_qq_login">
+
+                <ImageView
+                    android:id="@+id/qq_leftDrawable"
+                    style="@style/LeftDrawableStyle"
+                    android:src="@drawable/qq_login_icon"/>
+
+                <TextView
+                    style="@style/LoginButtonTextViewStyle"
+                    android:layout_toRightOf="@+id/qq_leftDrawable"
+                    android:text="@string/qq_login_text"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/token_edit_text"
+            style="@style/LoginButtonStyle"
+            android:hint="@string/input_token"
+            android:textColor="@color/black"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/debug_login_button"
+            style="@style/LoginButtonStyle"
+            android:background="@drawable/selector_button_wx_login"
+            android:text="@string/login_with_debug_mode"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

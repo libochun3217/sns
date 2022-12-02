@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/cardView"
+    style="@style/SnsCardView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/publish_layout_height">
+
+            <ImageView
+                android:id="@+id/iv_image"
+                android:layout_width="@dimen/publish_image_width"
+                android:layout_height="@dimen/publish_image_height"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/content_margin"
+                android:scaleType="fitXY"/>
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/publish_text_normal"
+                android:textSize="15sp"
+                android:typeface="normal"/>
+
+            <ImageView
+                android:id="@+id/btn_retry"
+                style="@style/SnsButtonStyle"
+                android:layout_width="@dimen/publish_image_width"
+                android:layout_height="@dimen/publish_image_height"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/default_item_spacing"
+                android:layout_toLeftOf="@id/btn_delete"
+                android:scaleType="centerInside"
+                android:src="@drawable/retry"
+                android:visibility="invisible"/>
+
+            <ImageView
+                android:id="@+id/btn_delete"
+                style="@style/SnsButtonStyle"
+                android:layout_width="@dimen/publish_image_width"
+                android:layout_height="@dimen/publish_image_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/default_item_spacing"
+                android:scaleType="centerInside"
+                android:src="@drawable/delete"
+                android:visibility="invisible"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/progress_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:id="@+id/publish_progress"
+                style="@style/UploadProgressHorizontalStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:max="100"
+                android:maxHeight="2dp"
+                android:minHeight="2dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

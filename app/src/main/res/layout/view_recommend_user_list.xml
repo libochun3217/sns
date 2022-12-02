@@ -1,0 +1,31 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.charlee.sns.widget.VerticalListView
+            android:id="@+id/vertical_user_list"
+            style="@style/RecommendUserListView"
+            app:vl_spacingVertical="0dp"
+            app:vl_spacingHorizontal="0dp"/>
+
+        <com.charlee.sns.widget.HorizontalListView
+            android:id="@+id/horizontal_user_list"
+            style="@style/RecommendUserListView"
+            app:hl_spacing="0dp"
+            app:hl_paddingStart="0dp"
+            app:hl_paddingEnd="0dp"/>
+
+    </FrameLayout>
+
+    <com.charlee.sns.view.EmptyPlaceholderView
+        android:id="@+id/empty_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:visibility="gone"/>
+
+</FrameLayout>

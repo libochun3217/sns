@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sns_bg_gray">
+
+    <FrameLayout
+        android:id="@+id/feeds_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.charlee.sns.view.FeedsView
+            android:id="@+id/feeds_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <FrameLayout
+            android:id="@+id/feeds_floating_action_button"
+            style="@style/SnsFloatingButton"
+            >
+
+            <View
+                android:id="@+id/floating_action_foreground"
+                style="@style/SnsFloatingButtonForeground"/>
+        </FrameLayout>
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 基本颜色 -->
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="sns_message_notification_gray">#333333</color>
+    <color name="sns_dark_gray">#6c6c6c</color>
+    <color name="sns_deep_gray">#818181</color>
+    <color name="sns_gray">#949494</color>
+    <color name="sns_gray_deep">#999999</color>
+    <color name="sns_light_gray">#b6b6b6</color>
+    <color name="sns_bg_gray">#ededed</color>
+    <color name="sns_button_gray">#e8e8e8</color>
+    <color name="sns_orange">#f97a09</color>
+    <color name="sns_orange_bg">#fba62a</color>
+    <color name="sns_orange_bg_dark">#b58e54</color>
+    <color name="sns_dark_blue">#6268a0</color><!-- 只有一种暗蓝色 -->
+    <color name="sns_green">#66b344</color>
+    <color name="sns_pink">#ff73b0</color>
+    <color name="sns_pink_deep">#f26da7</color>
+    <color name="sns_divider">#ebeced</color>
+    <color name="sns_button_pressed">#f5f6f7</color>
+
+    <!-- 全局颜色 -->
+    <color name="activity_background">@color/white</color>
+    <color name="background_light">@color/white</color>
+    <color name="bar_background_dark">@color/black</color>
+    <color name="tab_indicator">#ff73b0</color>
+    <color name="separator_color">#ffe7e7e7</color>
+    <color name="light_separator_color">#e0e0e0</color>
+    <color name="button_background_light">@color/white</color>
+    <color name="sns_image_loading_bg">#f4f4f4</color>
+
+    <!-- 通用颜色 -->
+    <color name="normal_text_dark">@color/black</color>
+    <color name="normal_text_deep_gray">@color/sns_deep_gray</color>
+    <color name="normal_text_gray">@color/sns_gray</color>
+    <color name="normal_text_light_gray">@color/sns_light_gray</color>
+    <color name="name_text">@color/sns_dark_blue</color><!-- 用户名 -->
+    <color name="link_text">@color/sns_dark_blue</color><!-- 标签 -->
+    <color name="time_text">@color/sns_light_gray</color><!-- 发布时间 -->
+    <color name="black_overlay">#66000000</color>
+    <color name="white_overlay">#E6ffffff</color>
+
+    <!-- 详情页 -->
+    <color name="follow_text">@color/sns_orange</color>
+
+    <!-- 登录页 -->
+    <color name="login_container_color">#f5f5f5</color>
+    <color name="login_anonymous_button_color_normal">@color/sns_pink</color>
+    <color name="login_anonymous_button_color_pressed">@color/sns_pink_deep</color>
+    <color name="login_fb_button_color_normal">#425e9d</color>
+    <color name="login_fb_button_color_pressed">#314a83</color>
+    <color name="login_kakao_button_color_normal">#ffeb3b</color>
+    <color name="login_kakao_button_color_pressed">#ffc107</color>
+    <color name="login_wx_button_color_normal">#00c800</color>
+    <color name="login_wx_button_color_pressed">#01b801</color>
+    <color name="login_qq_button_color_normal">#29c4fe</color>
+    <color name="login_qq_button_color_pressed">#14aae2</color>
+    <color name="login_close_button_normal">#f0f0f0</color>
+    <color name="login_close_button_pressed">#dddddd</color>
+
+    <!-- 个人中心 -->
+    <color name="user_detail_header_bg">#3b3b3b</color>
+    <color name="user_detail_header_number_text">@color/white</color>
+    <color name="user_detail_header_tip_text">#949494</color>
+    <color name="user_detail_header_follow_text">@color/white</color>
+    <color name="user_detail_header_follow_bg_normal">@color/sns_orange_bg</color>
+    <color name="user_detail_header_follow_bg_pressed">@color/sns_orange_bg_dark</color>
+    <color name="user_detail_header_followed_bg_normal">@color/transparent</color>
+    <color name="user_detail_header_followed_bg_pressed">#66ffffff</color>
+    <color name="user_detail_header_followed_stroke">#535353</color>
+    <color name="anonymous_bind_button_color_normal">#FFC107</color>
+    <color name="anonymous_bind_button_color_pressed">#FF9800</color>
+
+    <!-- titlebar -->
+    <color name="title_bar_bg">#302f2f</color>
+    <color name="title_bar_title_text">@color/white</color>
+    <color name="title_bar_btn_bg_normal">@color/transparent</color>
+    <color name="title_bar_btn_bg_pressed">#66ffffff</color>
+
+    <!-- comment -->
+    <color name="comment_user_name_text_color">@color/sns_dark_blue</color>
+    <color name="comment_published_time_text_color">@color/time_text</color>
+    <color name="comment_content_text_color">@color/black</color>
+    <color name="comment_sender_btn_text_color">@color/white</color>
+    <color name="comment_divider_line_color">#e6e6e6</color>
+    <color name="comment_edit_layout_background">#f7f7f7</color>
+    <color name="comment_edit_txt_color">#6c6c6c</color>
+    <color name="comment_edit_bg_color">@color/white</color>
+    <color name="comment_edit_stroke_color">#cccccc</color>
+    <color name="comment_card_btn_stroke">#e8e8e8</color>
+    <color name="comment_card_btn_bg">@color/white</color>
+    <color name="top_bar_text_color">@color/black</color>
+
+    <!-- publish -->
+    <color name="publish_text_normal">@color/sns_dark_gray</color>
+
+    <!-- 通知中心 -->
+    <color name="notify_item_text_name">@color/sns_dark_blue</color>
+    <color name="notify_item_text_comment">@color/black</color>
+    <color name="notify_item_text_publish_time">@color/sns_light_gray</color>
+    <color name="notify_item_divider_line">#e7e7e7</color>
+    <color name="notify_item_btn_follow_stroke">#e8e8e8</color>
+    <color name="notify_item_btn_follow_bg_pressed">#e8e8e8</color>
+    <color name="notify_item_btn_follow_followed_bg">#66b344</color>
+
+    <!-- empty holder -->
+    <color name="empty_holder_btn_txt_color">@color/sns_pink</color>
+
+    <!-- custom menu -->
+    <color name="custom_menu_divder_line">@color/comment_divider_line_color</color>
+    <color name="custom_menu_interval_space">@color/separator_color</color>
+    <color name="custom_menu_text_bg_normal">@color/white</color>
+    <color name="custom_menu_text_bg_pressed">#ececec</color>
+    <color name="custom_menu_text_bg_red_normal">@color/white</color>
+    <color name="custom_menu_text_bg_red_pressed">#ff0000</color>
+    <color name="custom_menu_text_color">@color/black</color>
+    <color name="custom_menu_text_color_disable">#b6b6b6</color>
+    <color name="custom_menu_text_color_pressed">@color/black</color>
+    <color name="custom_menu_text_color_red">#d22213</color>
+    <color name="custom_menu_text_color_red_disable">#b6b6b6</color>
+    <color name="custom_menu_text_color_red_pressed">@color/white</color>
+    <color name="top_bar_bottom_separator_color">@color/separator_color</color>
+    <color name="top_bar_background_white">#FFFFFF</color>
+    <color name="top_bar_background_orange">#ff73b0</color>
+    <color name="top_bar_title_color">#333333</color>
+
+</resources>
+

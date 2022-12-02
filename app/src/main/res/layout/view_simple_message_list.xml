@@ -1,0 +1,35 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <com.charlee.sns.widget.SwipeRefreshLayoutEx
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:swipe_direction="both">
+
+        <com.charlee.sns.widget.StaggeredListView
+            android:id="@+id/staggered_simple_message_list"
+            style="@style/SimpleMessageListView"
+            android:clipToPadding="false"/>
+
+    </com.charlee.sns.widget.SwipeRefreshLayoutEx>
+
+    <com.charlee.sns.view.EmptyPlaceholderView
+        android:id="@+id/empty_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <FrameLayout
+        android:id="@+id/feeds_floating_action_button"
+        style="@style/SnsFloatingButton"
+        >
+
+        <View
+            android:id="@+id/floating_action_foreground"
+            style="@style/SnsFloatingButtonForeground"/>
+    </FrameLayout>
+
+</FrameLayout>

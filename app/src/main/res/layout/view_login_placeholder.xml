@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/home_login_panel_bg">
+
+    <ImageView
+        android:id="@+id/image_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:src="@drawable/home_login_icon"/>
+
+    <Button
+        android:id="@+id/btn_action"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/image_hint"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/selector_button_campaign_participate"
+        android:text="@string/action_login"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/txt_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_action"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="@string/login_memo_user_center"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        />
+
+</RelativeLayout>

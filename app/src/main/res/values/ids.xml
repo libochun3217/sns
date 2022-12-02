@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 图片详情的Context Menu ID -->
+    <item name="ctx_menu_share" type="id"/>
+    <item name="ctx_menu_copy_url" type="id"/>
+    <item name="ctx_menu_report" type="id"/>
+    <item name="ctx_menu_delete" type="id"/>
+    <!-- 个人中心的设置按钮的菜单 -->
+    <item name="ctx_menu_logout" type="id"/>
+    <item name="ctx_menu_cancel" type="id"/>
+    <!-- 首页悬浮按钮子按钮 -->
+    <item name="floating_menu_sub_action_camera" type="id"/>
+    <item name="floating_menu_sub_action_picture" type="id"/>
+    <item name="floating_menu_sub_action_beautify" type="id"/>
+</resources>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/cardView"
+    style="@style/SnsCardView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/min_separator_height"
+            android:background="@color/light_separator_color"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/content_margin"
+            android:layout_marginLeft="@dimen/content_margin"
+            android:layout_marginRight="@dimen/content_margin"
+            android:layout_marginTop="@dimen/med_item_spacing">
+
+            <ImageView
+                android:id="@+id/img_user_avatar"
+                style="@style/AvatarImageView"
+                android:layout_width="@dimen/user_avatar_size_med"
+                android:layout_height="@dimen/user_avatar_size_med"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/img_user_avatar"
+                android:layout_toRightOf="@+id/img_user_avatar"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_user_name"
+                    style="@style/UserName.Large"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="2dp"
+                    android:ellipsize="middle"
+                    android:singleLine="true"
+                    android:maxWidth="@dimen/section_title_text_max_width"/>
+
+                <TextView
+                    android:id="@+id/txt_reason"
+                    style="@style/Reason"
+                    android:layout_centerVertical="true"
+                    android:ellipsize="middle"
+                    android:singleLine="true"
+                    android:maxWidth="@dimen/section_title_text_max_width"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_follow"
+                style="@style/SnsButtonStyle.Follow"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_to_follow"/>
+
+            <ImageView
+                android:id="@+id/img_following"
+                style="@style/SnsProgressStyle.Small"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/uploading"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/image_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/content_margin"
+                android:weightSum="4">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/image_first"
+                    style="@style/TagItemImageStyle"/>
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/image_second"
+                    style="@style/TagItemImageStyle"/>
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/image_third"
+                    style="@style/TagItemImageStyle"/>
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/image_forth"
+                    style="@style/TagItemImageStyle"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/container_no_photo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_marginTop="-15dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_no_photo"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:layout_marginBottom="@dimen/default_item_spacing"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text="@string/no_photo"
+                    android:textColor="#cccccc"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/min_separator_height"
+            android:background="@color/light_separator_color"/>
+
+    </LinearLayout>
+
+</FrameLayout>

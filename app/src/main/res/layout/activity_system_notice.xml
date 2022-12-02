@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sns_bg_gray">
+
+    <com.charlee.sns.view.TopBarLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_layout_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        app:left="back"
+        app:leftText="@string/back"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_bar">
+
+        <ImageView
+            android:id="@+id/img_gift_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/ic_gift_notification"/>
+
+        <EditText
+            android:id="@+id/txt_system_notice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_gift_notice"
+            android:inputType="none"
+            android:textIsSelectable="true"
+            android:layout_marginLeft="@dimen/max_item_spacing"
+            android:layout_marginRight="@dimen/max_item_spacing"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/ic_gift_text_bg"
+            android:gravity="center"
+            android:lineSpacingExtra="3dp"
+            android:textColor="@color/white"
+            android:textSize="15sp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

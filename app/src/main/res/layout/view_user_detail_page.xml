@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <!-- 下拉刷新 -->
+    <com.charlee.sns.widget.SwipeRefreshLayoutEx
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:swipe_direction="both">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/sns_bg_gray">
+
+            <com.charlee.sns.widget.StaggeredListView
+                android:id="@+id/staggered_message_list"
+                style="@style/UserMessageListView"
+                android:paddingTop="0dp"
+                android:clipToPadding="false"/>
+
+            <com.charlee.sns.view.EmptyPlaceholderView
+                android:id="@+id/no_photo_placeholder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/user_detail_header_height"
+                android:visibility="gone"/>
+
+            <com.charlee.sns.view.EmptyPlaceholderView
+                android:id="@+id/exception_placeholder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"/>
+
+            <com.charlee.sns.view.LoginPlaceholderView
+                android:id="@+id/login_placeholder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"/>
+
+            <com.charlee.sns.view.UserDetailsHeaderView
+                android:id="@+id/user_detail_header_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </com.charlee.sns.view.UserDetailsHeaderView>
+
+        </FrameLayout>
+    </com.charlee.sns.widget.SwipeRefreshLayoutEx>
+
+    <FrameLayout
+        android:id="@+id/anonymous_bind_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/med_item_spacing"
+            android:paddingBottom="@dimen/med_item_spacing"
+            android:background="@color/white_overlay">
+
+            <TextView
+                android:id="@+id/anonymous_bind_hint_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/anonymous_bind_button"
+                android:lineSpacingExtra="3dp"
+                android:paddingLeft="@dimen/large_item_spacing"
+                android:text="@string/anonymous_bind_hint_simple"
+                android:textColor="@color/sns_message_notification_gray"
+                android:textSize="12sp"/>
+
+            <Button
+                android:id="@+id/anonymous_bind_button"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/large_item_spacing"
+                android:layout_marginRight="@dimen/large_item_spacing"
+                android:background="@drawable/selector_button_campaign_participate"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="@string/anonymous_bind"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</FrameLayout>

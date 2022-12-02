@@ -1,0 +1,6 @@
+﻿<resources>
+
+    <string name="input_token">please input token</string>
+    <string name="login_with_debug_mode">login with debug mode</string>
+
+</resources>

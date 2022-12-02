@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="@dimen/notify_item_mini_height"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/transparent"
+        />
+
+    <FrameLayout
+        android:id="@+id/container_avatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/notify_item_margin_bottom"
+        android:layout_marginLeft="@dimen/notify_item_margin_left"
+        android:layout_marginRight="@dimen/notify_item_portrait_margin_right"
+        android:layout_marginTop="@dimen/notify_item_margin_top">
+
+        <ImageView
+            android:id="@+id/img_portrait"
+            style="@style/AvatarImageView"
+            android:layout_width="@dimen/notify_item_portrait_height"
+            android:layout_height="@dimen/notify_item_portrait_height"/>
+
+        <ImageView
+            android:id="@+id/img_official_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:src="@drawable/ic_official_indicator"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/img_message"
+        android:layout_width="@dimen/notify_item_message_image_width"
+        android:layout_height="@dimen/notify_item_message_image_height"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/notify_item_message_image_margin_bottom"
+        android:layout_marginLeft="@dimen/notify_item_message_image_margin_left"
+        android:layout_marginRight="@dimen/notify_item_margin_right"
+        android:layout_marginTop="@dimen/notify_item_message_image_margin_top"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_followed"/>
+
+    <FrameLayout
+        android:id="@+id/btn_follow_action"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/notify_item_btn_follow_height"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="@dimen/notify_item_margin_right"
+        android:layout_marginTop="@dimen/notify_item_margin_top"
+        android:background="@drawable/shape_button_to_follow"
+        >
+
+        <ImageView
+            android:id="@+id/btn_follow_action_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="center"
+            android:src="@drawable/ic_to_follow"
+            />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/state_follow_action_following"
+        android:layout_width="54dp"
+        android:layout_height="@dimen/notify_item_btn_follow_height"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="@dimen/notify_item_margin_right"
+        android:layout_marginTop="@dimen/notify_item_margin_top"
+        android:background="@drawable/shape_button_following"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:id="@+id/img_follow_btn_anim"
+            android:layout_width="@dimen/notify_item_btn_following_anim_height"
+            android:layout_height="@dimen/notify_item_btn_following_anim_height"
+            android:layout_gravity="center"
+            android:scaleType="centerInside"
+            android:src="@drawable/uploading"
+            />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/txt_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/notify_item_txt_commment_margin_bottom"
+        android:layout_marginTop="@dimen/notify_item_txt_commment_margin_top"
+        android:layout_toLeftOf="@id/img_message"
+        android:layout_toRightOf="@id/container_avatar"
+        android:gravity="top|left"
+        android:lineSpacingExtra="2dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/notify_item_text_name_size"/>
+
+    <View
+        android:id="@+id/divider_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/notify_item_divider_line_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/notify_item_margin_left"
+        android:layout_marginRight="@dimen/notify_item_margin_right"
+        android:background="@color/notify_item_divider_line"/>
+
+</RelativeLayout>

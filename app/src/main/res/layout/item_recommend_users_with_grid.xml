@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/sns_bg_gray">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/med_item_spacing"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/layout_more"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/content_margin"
+            android:layout_marginBottom="4dp"
+            android:layout_height="30dp">
+
+            <TextView
+                style="@style/CardViewTitle"
+                android:layout_centerVertical="true"
+                android:text="@string/recommend_users"/>
+
+            <TextView
+                android:id="@+id/txt_close_card_view"
+                style="@style/CardViewTitleMore"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/img_text_arrow"
+                android:text="@string/recommend_more"/>
+
+            <ImageView
+                android:id="@+id/img_text_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="4dp"
+                android:paddingBottom="1dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_notification_arrow"/>
+
+        </RelativeLayout>
+
+        <com.charlee.sns.view.RecommendUsersCardView
+            android:id="@+id/recommend_users"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.charlee.sns.view.RecommendUsersCardView>
+
+    </LinearLayout>
+
+</FrameLayout>
+

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/sns_image_loading_bg"
+        android:scaleType="centerCrop">
+
+    </com.facebook.drawee.view.SimpleDraweeView>
+
+    <LinearLayout
+        android:id="@+id/vote_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|bottom"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/img_like"
+            style="@style/SnsSmallIconStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/txt_likes_num"
+            style="@style/LikesNum"
+            android:textColor="@color/white"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="2dp"/>
+    </LinearLayout>
+
+    <ImageView
+            android:id="@+id/gif_flag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/ic_gif"
+            android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/video_flag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/ic_video_flag"
+        android:visibility="gone" />
+
+</FrameLayout>
+

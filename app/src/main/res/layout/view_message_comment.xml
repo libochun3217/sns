@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/comment_edit_layout"
+            android:orientation="vertical">
+
+            <com.charlee.sns.widget.VerticalListView
+                android:id="@+id/publish_list"
+                style="@style/CommentListRecyclerView"/>
+
+            <com.charlee.sns.widget.SwipeRefreshLayoutEx
+                android:id="@+id/swipe_refresh_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:swipe_direction="both">
+
+                <com.charlee.sns.widget.VerticalListView
+                    android:id="@+id/comment_list"
+                    style="@style/CommentListRecyclerView"/>
+            </com.charlee.sns.widget.SwipeRefreshLayoutEx>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/comment_edit_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/comment_edit_layout_background"
+            android:paddingLeft="@dimen/comment_sender_padding_left"
+            android:paddingRight="@dimen/comment_sender_padding_right">
+
+            <EditText
+                android:id="@+id/et_edit_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_item_spacing"
+                android:layout_marginBottom="@dimen/default_item_spacing"
+                android:layout_weight="1"
+                android:background="@drawable/shape_comment_edit"
+                android:hint="@string/edit_comment_hint"
+                android:maxHeight="@dimen/comment_sender_edit_max_height"
+                android:maxLength="@integer/text_max_length"
+                android:minHeight="@dimen/comment_sender_edit_height"
+                android:paddingLeft="@dimen/comment_sender_edit_padding_left"
+                android:paddingRight="@dimen/comment_sender_edit_padding_right"
+                android:textColor="@color/comment_edit_txt_color"
+                android:textSize="@dimen/comment_sender_edit_txt_size"/>
+
+            <Button
+                android:id="@+id/btn_publish_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/comment_sender_btn_height"
+                android:maxWidth="@dimen/comment_sender_btn_max_width"
+                android:paddingLeft="@dimen/default_item_spacing"
+                android:paddingRight="@dimen/default_item_spacing"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/med_item_spacing"
+                android:background="@drawable/selector_user_detail_header_follow_btn_bg"
+                android:text="@string/publish_comment"
+                android:textColor="@color/comment_sender_btn_text_color"
+                android:textSize="@dimen/comment_sender_btn_txt_size"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.charlee.sns.view.EmptyPlaceholderView
+        android:id="@+id/empty_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+</FrameLayout>

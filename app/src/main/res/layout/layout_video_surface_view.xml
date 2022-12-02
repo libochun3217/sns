@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<com.google.android.exoplayer2.ui.AspectRatioFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:foregroundGravity="center">
+
+    <ProgressBar
+        android:id="@+id/progress_a"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:indeterminateDrawable="@drawable/shape_video_load_progress"/>
+
+    <TextureView
+        android:id="@+id/video_surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/img_voice_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="@dimen/max_item_spacing"
+        android:layout_marginRight="@dimen/max_item_spacing"
+        android:scaleType="center"
+        android:src="@drawable/ic_voice"/>
+
+</com.google.android.exoplayer2.ui.AspectRatioFrameLayout>
+

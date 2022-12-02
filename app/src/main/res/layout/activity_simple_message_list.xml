@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                style="@style/AppTheme.RootView"
+                tools:context="com.charlee.sns.activity.SimpleMessageListActivity">
+
+    <com.charlee.sns.view.TopBarLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_layout_height"
+        android:layout_alignParentTop="true"
+        app:left="back"
+        app:leftText="@string/back"/>
+
+    <com.charlee.sns.view.SimpleMessageListView
+        android:id="@+id/tag_message_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/sns_bg_gray"
+        android:layout_below="@+id/title_bar">
+
+    </com.charlee.sns.view.SimpleMessageListView>
+
+</RelativeLayout>

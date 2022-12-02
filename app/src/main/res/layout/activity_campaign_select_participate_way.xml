@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/pop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        >
+
+        <Button
+            android:id="@+id/btn_use_function"
+            style="@style/SelectButtonStyle"
+            android:background="@drawable/selector_campaign_select_button_with_up_corner"
+            android:text="@string/campaign_join_edit"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#ebeced"/>
+
+        <Button
+            android:id="@+id/btn_pick_photo"
+            style="@style/SelectButtonStyle"
+            android:background="@drawable/selector_campaign_select_button_with_down_corner"
+            android:text="@string/campaign_join_ablum"
+            />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            style="@style/SelectButtonStyle"
+            android:layout_marginBottom="@dimen/large_item_spacing"
+            android:layout_marginTop="@dimen/med_item_spacing"
+            android:background="@drawable/selector_campaign_select_button_with_corners"
+            android:text="@string/cancel"
+            />
+
+    </LinearLayout>
+</RelativeLayout>  
