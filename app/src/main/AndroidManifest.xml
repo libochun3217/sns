@@ -23,6 +23,86 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.FullMessageListActivity"
+            android:configChanges="keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="motu.baidu.com"
+                    android:path="/hot_msgs"
+                    android:scheme="photowonder" />
+                <data
+                    android:host="motu.baidu.com"
+                    android:path="/latest_msgs"
+                    android:scheme="photowonder" />
+                <data
+                    android:host="motu.baidu.com"
+                    android:path="/user_msgs"
+                    android:scheme="photowonder" />
+                <data
+                    android:host="motu.baidu.com"
+                    android:path="/tag_msgs"
+                    android:scheme="photowonder"/>
+                <data
+                    android:host="motu.baidu.com"
+                    android:path="/message_details"
+                    android:scheme="photowonder" />
+                <data
+                    android:host="motu.baidu.com"
+                    android:path="/campaign_msgs"
+                    android:scheme="photowonder" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.SimpleMessageListActivity"
+            android:configChanges="keyboardHidden|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="motu.baidu.com"
+                    android:path="/tag_message_list"
+                    android:scheme="photowonder" />
+                <data
+                    android:host="motu.baidu.com"
+                    android:path="/latest_message_list"
+                    android:scheme="photowonder" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.MessageCommentActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data
+                    android:host="motu.baidu.com"
+                    android:path="/browse_message_comment"
+                    android:scheme="photowonder"/>
+                <data
+                    android:host="motu.baidu.com"
+                    android:path="/add_message_comment"
+                    android:scheme="photowonder"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
