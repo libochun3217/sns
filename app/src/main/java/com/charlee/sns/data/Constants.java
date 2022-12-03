@@ -8,19 +8,11 @@ import com.facebook.animated.gif.BuildConfig;
 public class Constants {
 
     // 服务器URL
-    public static final String GP_SERVICE_ENDPOINT = BuildConfig.DEBUG ? "http://cp01-motu-qa-fromcq.epc.baidu.com:8080" :
-            "https://motu-hk.baidu.com"; // GP版生产环境：https://motu-hk.baidu.com
+    public static final String GP_SERVICE_ENDPOINT = "https://motu-hk.baidu.com"; // GP版生产环境：https://motu-hk.baidu.com
 
-    public static final String CN_SERVICE_ENDPOINT = BuildConfig.DEBUG ? "http://cp01-motu-qa-fromcq.epc.baidu.com:8080" :
-            "https://motuapi.baidu.com"; // 国内版生产环境：https://motuapi.baidu.com
-
-    // QA环境的服务器URL
-    public static final String SERVICE_QA_ENDPOINT = "http://cp01-motu-qa-fromcq.epc.baidu.com:8080";
 
     // DOMAIN
-    public static final String SERVICE_QA_ENDPOINT_DOMAIN = "cp01-motu-qa-fromcq.epc.baidu.com";
     public static final String GP_SERVICE_ENDPOINT_DOMAIN = "motu-hk.baidu.com";
-    public static final String CN_SERVICE_ENDPOINT_DOMAIN = "motuapi.baidu.com";
 
     public static final long IMAGE_UPLOAD_TIMEOUT = 120; // 图片上传超时时间（秒）
 

@@ -120,9 +120,10 @@ public class MotuSnsServiceProvider {
 
                         Request request = builder.build();
                         try {
-                            Response response = chain.proceed(request);
-                            return response;
-                        } catch (IOException ex) {
+                            return DataMocker.INSTANCE.dispatchMockResponse(request);
+//                            Response response = chain.proceed(request);
+//                            return response;
+                        } catch (Exception ex) {
                             throw ex;
                         }
                     }
@@ -147,21 +148,11 @@ public class MotuSnsServiceProvider {
     }
 
     private static String getServiceUrl(boolean qaMode) {
-        if (qaMode) {
-            return Constants.SERVICE_QA_ENDPOINT;
-        }
-
-        boolean isGooglePlayChannel = BuildConfig.FLAVOR.equals("googleplay");
-        return isGooglePlayChannel ? Constants.GP_SERVICE_ENDPOINT : Constants.CN_SERVICE_ENDPOINT;
+        return Constants.GP_SERVICE_ENDPOINT;
     }
 
     private static String getDomain(boolean qaMode) {
-        if (qaMode) {
-            return Constants.SERVICE_QA_ENDPOINT_DOMAIN;
-        }
-
-        boolean isGooglePlayChannel = BuildConfig.FLAVOR.equals("googleplay");
-        return isGooglePlayChannel ? Constants.GP_SERVICE_ENDPOINT_DOMAIN : Constants.CN_SERVICE_ENDPOINT_DOMAIN;
+        return Constants.GP_SERVICE_ENDPOINT_DOMAIN;
     }
 
 }
